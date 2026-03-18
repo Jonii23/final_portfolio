@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "CompTIA Cloud+ Intermediate",
+    "date": "19 February 2025",
+    "link": "https://alison.com/certification/check/f41941a8a2"
+  },
+  {
+    "id": 2,
+    "title": "Cisco ICND1 CCNA",
+    "date": "11 March 2025",
+    "link": "https://alison.com/certification/check/480581bab7"
+  },
+  {
+    "id": 3,
+    "title": "Cisco ICND2 CCNA",
+    "date": "05 April 2025",
+    "link": "https://alison.com/certification/check/69a75c997a"
+  }
+]

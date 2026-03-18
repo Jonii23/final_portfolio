@@ -1,0 +1,77 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Theme configuration for Tailwind v4 */
+@theme {
+  --color-navy: #1e3a5f;
+  --color-navy-dark: #162d47;
+}
+
+:root {
+  --navy: #1e3a5f;
+  --navy-dark: #162d47;
+  --accent: #1e40af;
+  --body: #475569;
+  --bg: #ffffff;
+  --border: #e5e7eb;
+}
+
+html, body, #root { height: 100%; margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--body);
+  overflow-x: hidden;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.btn-primary {
+  padding: 0.7rem 1.4rem;
+  background: var(--navy);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-outline {
+  padding: 0.7rem 1.4rem;
+  border: 2px solid currentColor;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.edit-btn {
+  padding: 8px 16px;
+  background: var(--navy) !important;
+  color: white !important;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+}
+
+.delete-btn {
+  padding: 8px 16px;
+  background: var(--accent) !important;
+  color: white !important;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+}

@@ -1,0 +1,250 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body {
+  overflow-x: hidden;
+}
+
+.landing-wrapper {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+  color:silver;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* CANVAS */
+#canvas3d {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* FLOATING SHAPES */
+.floating-shapes {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.12;
+  animation: floatRandom 20s infinite ease-in-out;
+}
+
+/* Shapes */
+.shape:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  background: #ffffff;
+  top: 15%;
+  left: 8%;
+  border-radius: 20px;
+}
+.shape:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  background: #ffffff;
+  top: 65%;
+  right: 12%;
+  border-radius: 50%;
+}
+.shape:nth-child(3) {
+  width: 120px;
+  height: 120px;
+  background: #ffffff;
+  bottom: 18%;
+  left: 18%;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+/* MAIN CONTAINER */
+.container {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROFILE SECTION */
+.profile-section {
+  text-align: center;
+  max-width: 800px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* AVATAR */
+.avatar {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #062e55 0%, #003d7a 100%);
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  font-family: 'Georgia', serif;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* TEXT */
+.profile-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #e8f0f7;
+  margin-bottom: 30px;
+  animation: slideInRight 1s ease-out 0.5s both;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #d0e0f0;
+  margin-bottom: 50px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 1s ease-out 0.7s both;
+}
+
+/* BUTTON ROW */
+.cta-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 18px 40px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #001f3f;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary:hover {
+  background: #f5f9ff;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* KEYFRAMES */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes floatRandom {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(30px, -30px) rotate(90deg); }
+  50% { transform: translate(-25px, 25px) rotate(180deg); }
+  75% { transform: translate(35px, 15px) rotate(270deg); }
+}
+
+/* ADMIN FLOAT BUTTON — positioned next to TJ avatar */
+/* ADMIN FLOAT BUTTON — responsive bubble */
+.admin-float-btn {
+  position: absolute;
+  top: 130px;
+  left: 55%;
+  transform: translateX(-50%);
+
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+
+  background: rgba(11, 12, 66, 0.9);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  color: #909eac;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  z-index: 10;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.admin-float-btn:hover {
+  transform: translateX(-50%) scale(1.07);
+  box-shadow: 0 14px 40px rgba(255, 255, 255, 0.4);
+  background: rgb(156, 147, 147);
+}
+
+
+
