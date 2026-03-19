@@ -17,15 +17,13 @@ export default function AdminLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Simple password check (use environment variable in production)
-    const ADMIN_PASSWORD = "Olwethu@23*!"; // Change this!
-    
-    if (password === ADMIN_PASSWORD) {
-      login();
+
+    const result = login(password);
+
+    if (result.ok) {
       navigate("/admin/dashboard");
     } else {
-      setError("Incorrect password");
+      setError(result.error || "Incorrect password");
       setPassword("");
     }
   };
