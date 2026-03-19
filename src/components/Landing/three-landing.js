@@ -1,8 +1,16 @@
 import * as THREE from "three";
 
+let currentCleanup = null;
+
 export function startLanding3D() {
+  // Clean up any previous instance first
+  if (currentCleanup) {
+    currentCleanup();
+    currentCleanup = null;
+  }
+
   const canvas = document.getElementById("canvas3d");
-  if (!canvas) return;
+  if (!canvas) return () => {};
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
@@ -47,13 +55,15 @@ export function startLanding3D() {
   let mouseX = 0;
   let mouseY = 0;
 
-  document.addEventListener("mousemove", (e) => {
+  const onMouseMove = (e) => {
     mouseX = (e.clientX / window.innerWidth) * 2 - 1;
     mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
-  });
+  };
+  document.addEventListener("mousemove", onMouseMove);
 
+  let animFrameId;
   function animate() {
-    requestAnimationFrame(animate);
+    animFrameId = requestAnimationFrame(animate);
 
     torus.rotation.x += 0.008;
     torus.rotation.y += 0.004;
@@ -73,9 +83,25 @@ export function startLanding3D() {
 
   animate();
 
-  window.addEventListener("resize", () => {
+  const onResize = () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-  });
+  };
+  window.addEventListener("resize", onResize);
+
+  // Cleanup function
+  const cleanup = () => {
+    cancelAnimationFrame(animFrameId);
+    document.removeEventListener("mousemove", onMouseMove);
+    window.removeEventListener("resize", onResize);
+    renderer.dispose();
+    material.dispose();
+    torus.geometry.dispose();
+    octa.geometry.dispose();
+    ico.geometry.dispose();
+  };
+
+  currentCleanup = cleanup;
+  return cleanup;
 }

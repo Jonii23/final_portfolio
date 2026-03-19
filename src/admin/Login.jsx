@@ -12,7 +12,8 @@ export default function AdminLogin() {
 
   // Start 3D background
   useEffect(() => {
-    startLanding3D();
+    const cleanup = startLanding3D();
+    return () => { if (cleanup) cleanup(); };
   }, []);
 
   const handleSubmit = (e) => {

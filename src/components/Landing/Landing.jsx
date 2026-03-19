@@ -4,7 +4,8 @@ import { startLanding3D } from "./three-landing";
 
 export default function Landing({ onEnter }) {
   useEffect(() => {
-    startLanding3D();
+    const cleanup = startLanding3D();
+    return () => { if (cleanup) cleanup(); };
   }, []);
 
   return (

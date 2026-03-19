@@ -4,7 +4,8 @@ import "./GlobalBackground.css";
 
 export default function GlobalBackground() {
   useEffect(() => {
-    startLanding3D();
+    const cleanup = startLanding3D();
+    return () => { if (cleanup) cleanup(); };
   }, []);
 
   return (

@@ -21,7 +21,8 @@ export default function Dashboard() {
 
   // 3D background
   useEffect(() => {
-    startLanding3D();
+    const cleanup = startLanding3D();
+    return () => { if (cleanup) cleanup(); };
   }, []);
 
   // LOAD
