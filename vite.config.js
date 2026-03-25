@@ -1,12 +1,12 @@
-import { defineConfig } from "vite"; // ⚠ must import defineConfig
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: mode === "development" ? "/" : "/final_portfolio/",
+  base: "/",
   server: {
     port: 5173,
     host: true,
   },
-}));
+});
