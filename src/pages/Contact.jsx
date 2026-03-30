@@ -174,3 +174,4 @@ export default function Contact() {
     </section>
   );
 }
+console.log("KEY:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
