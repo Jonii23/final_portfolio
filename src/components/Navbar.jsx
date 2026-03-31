@@ -76,7 +76,7 @@ export default function Navbar() {
           gap: '0.75rem'
         }} className="desktop-cta">
           <a 
-            href="/Thandolwethu_Joni_CV.pdf" 
+            href="/CURRICULUM VITAE OF THANDOLWETHU JONI-1.pdf" 
             download 
             className="btn-outline"
             style={{
