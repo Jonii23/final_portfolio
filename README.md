@@ -150,7 +150,7 @@ final_portfolio/
    ```
 
 4. **Open in browser**
-   - Navigate to `http://localhost:5173` (or the port shown in terminal)
+   - Navigate to the port shown in terminal
 
 ---
 
@@ -183,7 +183,7 @@ final_portfolio/
 
 1. **Login**
    - Navigate to `/admin`
-   - Enter password: `admin123` (change this in production!)
+   - Enter password: contact for password
 
 2. **Dashboard Features**
 
@@ -290,16 +290,7 @@ npm run preview
    vercel
    ```
 
-#### Deploy to Netlify
 
-1. Build the project:
-   ```bash
-   npm run build
-   ```
-
-2. Drag the `dist/` folder to [Netlify Drop](https://app.netlify.com/drop)
-
----
 
 ## 🔧 Configuration
 
