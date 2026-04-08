@@ -9,7 +9,7 @@ export function AuthProvider({ children }) {
   // Load stored auth on refresh
   useEffect(() => {
     const saved = localStorage.getItem("portfolio_admin_authed");
-    if (saved === "1") setIsAuthed(true);
+    if (saved === "1") setIsAuthed(false);
   }, []);
 
   const login = (password) => {

@@ -16,9 +16,6 @@ import AdminLogin from "./admin/Login.jsx";
 import Dashboard from "./admin/Dashboard.jsx";
 import ProtectedRoute from "./admin/ProtectedRoute.jsx";
 
-// Error Boundary
-import ErrorBoundary from "./components/ErrorBoundary.jsx";
-
 // Layout wrapper with Navbar
 function Layout({ children }) {
   return (
@@ -35,21 +32,20 @@ function NotFound() {
     <div style={{ textAlign: "center", padding: 50 }}>
       <h1>404 - Page Not Found 😢</h1>
       <p>
-        The page you’re looking for doesn’t exist. Go back{" "}
-        <a href="/final_portfolio">home</a>.
+        The page you’re looking for doesn’t exist.
       </p>
     </div>
   );
 }
 
-// Routes
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <NotFound />, // catch-all for unknown routes
+    errorElement: <NotFound />,
   },
-  // ----- public pages with navbar -----
+
+  // Public pages
   {
     path: "/about",
     element: (
@@ -57,7 +53,6 @@ const router = createBrowserRouter([
         <About />
       </Layout>
     ),
-    errorElement: <NotFound />,
   },
   {
     path: "/projects",
@@ -66,7 +61,6 @@ const router = createBrowserRouter([
         <Projects />
       </Layout>
     ),
-    errorElement: <NotFound />,
   },
   {
     path: "/skills",
@@ -75,7 +69,6 @@ const router = createBrowserRouter([
         <Skills />
       </Layout>
     ),
-    errorElement: <NotFound />,
   },
   {
     path: "/contact",
@@ -84,7 +77,6 @@ const router = createBrowserRouter([
         <Contact />
       </Layout>
     ),
-    errorElement: <NotFound />,
   },
   {
     path: "/blog",
@@ -93,7 +85,6 @@ const router = createBrowserRouter([
         <Blog />
       </Layout>
     ),
-    errorElement: <NotFound />,
   },
   {
     path: "/blog/:slug",
@@ -102,10 +93,15 @@ const router = createBrowserRouter([
         <BlogPost />
       </Layout>
     ),
-    errorElement: <NotFound />,
   },
-  // ----- admin pages (no navbar) -----
-  { path: "/admin", element: <AdminLogin />, errorElement: <NotFound /> },
+
+  // Admin login (not protected)
+  {
+    path: "/admin",
+    element: <AdminLogin />,
+  },
+
+  // Protected admin routes
   {
     path: "/admin/dashboard",
     element: (
@@ -113,7 +109,6 @@ const router = createBrowserRouter([
         <Dashboard />
       </ProtectedRoute>
     ),
-    errorElement: <NotFound />,
   },
   {
     path: "/admin/create",
@@ -122,7 +117,6 @@ const router = createBrowserRouter([
         <CreatePost />
       </ProtectedRoute>
     ),
-    errorElement: <NotFound />,
   },
   {
     path: "/admin/edit/:slug",
@@ -131,7 +125,6 @@ const router = createBrowserRouter([
         <EditPost />
       </ProtectedRoute>
     ),
-    errorElement: <NotFound />,
   },
 ]);
 
