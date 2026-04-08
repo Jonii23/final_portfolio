@@ -18,11 +18,11 @@ export default function Contact() {
       )
       .then(
         () => {
-          setStatus("Message sent successfully! 🎉");
+          setStatus("Message sent successfully!");
           formRef.current.reset();
         },
         (error) => {
-          setStatus("Failed to send. ❌");
+          setStatus("Failed to send.");
           console.error(error);
         }
       );

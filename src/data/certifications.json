@@ -3,18 +3,28 @@
     "id": 1,
     "title": "CompTIA Cloud+ Intermediate",
     "date": "19 February 2025",
-    "link": "https://alison.com/certification/check/f41941a8a2"
+    "link": "https://alison.com/certification/check/f41941a8a2",
+    "file": "/certificates/CompTIA_Cloud+.pdf"
   },
   {
     "id": 2,
     "title": "Cisco ICND1 CCNA",
     "date": "11 March 2025",
-    "link": "https://alison.com/certification/check/480581bab7"
+    "link": "https://alison.com/certification/check/480581bab7",
+    "file": "/certificates/ICND1_DIPLOMA.pdf"
   },
   {
     "id": 3,
     "title": "Cisco ICND2 CCNA",
     "date": "05 April 2025",
-    "link": "https://alison.com/certification/check/69a75c997a"
+    "link": "https://alison.com/certification/check/69a75c997a",
+    "file": "/certificates/ICND2_DIPLOMA.pdf"
+  },
+  {
+    "id": 4,
+    "title": "Full Stack Development",
+    "date": "14 July 2025",
+    "link": "",
+    "file": "/public/certificates/Full_Stack.pdf"
   }
 ]
