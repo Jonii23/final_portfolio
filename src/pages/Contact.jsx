@@ -38,14 +38,27 @@ export default function Contact() {
         paddingTop: '7rem' // Account for fixed navbar
       }}
     >
+      
+      
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <h1 className="section-title">Contact Me</h1>
+
         <div className="divider"></div>
         <p style={{ marginTop: '1rem', color: 'var(--body)', fontSize: '1.1rem' }}>
           Let's work together on your next project
         </p>
       </div>
-
+      <div
+            style={{
+              width: "100%",
+              height: "7px",
+              background: "linear-gradient(90deg,#0f172a,#3b82f6)",
+              borderRadius: "1099px",
+              marginTop: "1rem",
+              marginBottom:"2rem"
+            }}
+          />
+          
       <form 
         ref={formRef} 
         onSubmit={sendEmail} 

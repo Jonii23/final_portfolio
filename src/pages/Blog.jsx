@@ -29,7 +29,7 @@ export default function Blog() {
       padding: '7rem 1.5rem 4rem 1.5rem'
     }}>
       <div className="section-header">
-        <h1 className="section-title">Blog</h1>
+        <h1 className="section-title"></h1>
         <div className="divider"></div>
       </div>
 
@@ -46,7 +46,7 @@ export default function Blog() {
             fontSize: '1.125rem',
             color: '#94a3b8'
           }}>
-            No blog posts yet. Check back soon! 📝
+            
           </p>
         </div>
       ) : (
@@ -94,7 +94,7 @@ export default function Blog() {
                 color: 'var(--accent)',
                 fontWeight: '500'
               }}>
-                Click to read →
+              
               </p>
             </Link>
           ))}

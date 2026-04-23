@@ -24,7 +24,7 @@ export default function Landing({ onEnter }) {
         className="admin-float-btn"
         onClick={() => (window.location.href = "/admin")}
       >
-        Admin
+        
       </button>
 
       {/* Main Content */}
@@ -46,7 +46,7 @@ export default function Landing({ onEnter }) {
           </p>
 
           <div className="cta-buttons">
-            <button className="btn btn-primary" onClick={onEnter}>
+            <button className="btn btn-secondary" onClick={onEnter}>
               View Portfolio
             </button>
 

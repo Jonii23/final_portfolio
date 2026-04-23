@@ -48,9 +48,6 @@ export default function Navbar() {
         <div style={{
           display: 'none',
           gap: '2rem',
-          '@media (min-width: 768px)': {
-            display: 'flex'
-          }
         }} className="desktop-nav">
           {links.map((l) => (
             <Link
@@ -75,9 +72,8 @@ export default function Navbar() {
           display: 'none',
           gap: '0.75rem'
         }} className="desktop-cta">
-          <a 
-            href="/CURRICULUM VITAE OF THANDOLWETHU JONI-1.pdf" 
-            download 
+          <Link 
+            to="/resume"
             className="btn-outline"
             style={{
               borderColor: 'white',
@@ -85,7 +81,7 @@ export default function Navbar() {
             }}
           >
             Resume
-          </a>
+          </Link>
           <Link 
             to="/contact" 
             className="btn-primary"
@@ -145,9 +141,9 @@ export default function Navbar() {
             gap: '0.75rem',
             paddingTop: '1rem'
           }}>
-            <a 
-              href="/Thandolwethu_Joni_CV.pdf" 
-              download 
+            <Link 
+              to="/resume"
+              onClick={() => setOpen(false)}
               className="btn-outline"
               style={{
                 flex: 1,
@@ -157,9 +153,10 @@ export default function Navbar() {
               }}
             >
               Resume
-            </a>
+            </Link>
             <Link 
               to="/contact" 
+              onClick={() => setOpen(false)}
               className="btn-primary"
               style={{
                 flex: 1,
