@@ -63,7 +63,7 @@ export default function Resume() {
         boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
       }}>
         <iframe
-          src="/public/CURRICULUM VITAE OF THANDOLWETHU JONI-1.pdf"
+          src="/CURRICULUM VITAE OF THANDOLWETHU JONI-1.pdf"
           style={{
             width: '100%',
             height: '800px',
