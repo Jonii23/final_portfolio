@@ -25,8 +25,8 @@ export default function Resume() {
         </div>
 
         <a
-          href="/thandolwethu_joni_cv.pdf"
-          download="Thandolwethu_Joni_CV.pdf"
+          href="/CURRICULUM VITAE OF THANDOLWETHU JONI-1.pdf"
+          download="/CURRICULUM VITAE OF THANDOLWETHU JONI-1.pdf"
           style={{
             padding: '0.75rem 1.5rem',
             background: 'var(--navy)',
