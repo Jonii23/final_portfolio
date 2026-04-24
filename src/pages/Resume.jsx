@@ -91,7 +91,7 @@ export default function Resume() {
           flexWrap: 'wrap'
         }}>
           <a
-            href="/public/CURRICULUM VITAE OF THANDOLWETHU JONI-1.pdf"
+            href="/CURRICULUM VITAE OF THANDOLWETHU JONI-1.pdf"
             download
             className="btn-primary"
           >

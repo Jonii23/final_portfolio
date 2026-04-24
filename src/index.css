@@ -82,3 +82,95 @@ body {
   border: none;
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE FRIENDLY
+======================================== */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .card {
+    padding: 1.25rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-sub {
+    font-size: 0.95rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .btn-primary,
+  .btn-outline {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+/* Fix button hover on mobile */
+@media (hover: none) {
+  .btn-primary:hover {
+    background: var(--navy);
+    color: white;
+  }
+}
+
+/* Footer Responsive Styles */
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+  
+  footer h3, footer h4 {
+    text-align: center;
+  }
+  
+  footer h3 span {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  footer ul li {
+    justify-content: center;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  footer {
+    padding: 2rem 1rem 1.5rem !important;
+  }
+  
+  footer .bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}

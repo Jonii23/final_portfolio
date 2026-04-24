@@ -7,7 +7,7 @@ const links = [
   { label: "Projects", to: "/projects" },
   { label: "Skills", to: "/skills" },
   { label: "Contact", to: "/contact" },
-  { label: "Blog", to: "/blog" },
+  // { label: "Blog", to: "/blog" },
 ];
 
 export default function Navbar() {

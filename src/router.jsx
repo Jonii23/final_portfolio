@@ -10,19 +10,23 @@ import Resume from "./pages/Resume.jsx";
 import CreatePost from "./pages/CreatePost.jsx";
 import EditPost from "./pages/EditPost.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer"; 
 
 // Admin
 import AdminLogin from "./admin/Login.jsx";
 import Dashboard from "./admin/Dashboard.jsx";
 import ProtectedRoute from "./admin/ProtectedRoute.jsx";
 
-// Layout wrapper with Navbar
+// Layout wrapper with Navbar and Footer
 function Layout({ children }) {
   return (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navbar />
-      {children}
-    </>
+      <main style={{ flex: 1 }}>
+        {children}
+      </main>
+      <Footer />
+    </div>
   );
 }
 
@@ -42,7 +46,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <NotFound />,
   },
-  // Public pages with navbar
+  // Public pages with navbar and footer
   {
     path: "/about",
     element: (
